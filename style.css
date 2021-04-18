@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    background: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav_container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;;
+}
+#navlogo img{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navmenu{
+    display: flex;
+    align-items: center;
+    list-style: none;   
+}
+
+.navitem{
+    height: 80px;
+}
+
+.navlinks{
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 125px;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    padding: 8px 10px;
+    margin: 7px 3px;
+    border: 2px solid rgb(241, 28, 110);
+    border-radius: 8px;
+    background: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.button:hover{
+    background:rgb(241, 28, 110);
+    color: rgb(87, 2, 16);
+    border: 2px solid  rgb(117, 3, 22);
+    cursor: pointer;
+
+}
+
+.navlinks:hover{
+    color: rgb(136, 133, 133);
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px){
+    .nav_container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navmenu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+        background:black;
+    }
+    .navmenu.active{
+        
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+
+    #navlogo{
+        padding-left: 25px;
+    }
+
+    .navtoggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background:white;
+    }
+    .navitem{
+        width:100%;
+    }
+    .navlinks{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbtn{
+        padding-bottom: 2rem;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+    #contact{
+        font-size: 25px;
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right:5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navtoggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+   
+    #mobile-menu.is-active.bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active.bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active.bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
+
+   
+}
+.me{
+    background: rgba(0,0, 0,0.7) url('bg1.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin:0 auto;
+    height: 80%;
+}
+.text-big{
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    text-shadow: 0rem;
+}
+.text-small{
+    font-size:24px;
+    text-align: center;
+    color:white;
+}
+.name{
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    color: cyan;
+}
+hr{
+    border-style: none;
+    margin: auto;
+    width: 70%;
+    border-top: 10px dotted grey;
+}
+.firstsection{
+    height: 100vh;
+}
+.firsthalf{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlight{
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+.sec{
+    height: 400px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width:70%;
+    margin: auto;
+    font-family: 'Lobster Two', cursive;
+    
+}
+.left{
+    
+    flex-direction: row-reverse;
+}
+.line{
+    border-style: none;
+    margin: auto;
+    width: 30%;
+    border-top: 4px dashed grey;
+    
+}
+.paras{
+    padding: 0px 65px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+}
+.secSubTag{
+    
+    
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: rgb(43, 41, 41);
+}
+.thumbnail{
+    padding: 0px;
+    padding-top: 35px;
+    width: 180px 180px;
+    display: flex;
+}
+
+.linkgit{
+    text-decoration: none;
+    font-family: 'Lobster Two', cursive;
+    color: gray;
+    
+}
+.linkgit:hover{
+    cursor: pointer;
+    color: brown;
+    transform: translate(all 0.3s ease);
+
+}
+.thumbnail img{
+    
+    max-width: 180px;
+    height: auto;
+}
+
+.h1{
+    text-align: left;
+    color: rgb(255, 0, 55);
+    font-size: 70px;
+}
+.h2{
+    text-align: right;
+}
+.sec2{
+    flex-direction: row-reverse;
+}
+.menu{
+    /* align-items: center; */
+    /* cursor: pointer; */
+    justify-content: center;
+    width: 50%;
+    /* background-color:black; */
+    display: flex;
+    align-items: center;    
+}
+.menu li{
+    font-size: 23px;
+    display: flex;
+    list-style: square;
+    color: grey;
+    padding:6px 6px;
+    font-family: 'Lobster Two', cursive;
+}
+
+.head2{
+    text-align: right;
+    font-size: 70px;
+}
+.img2{
+    display: flex;
+    flex-direction: row-reverse;
+    
+    height: 150px;
+    width: 200px;
+}
+
+.contact{
+    background: rgb(34, 34, 34);
+    height: 70vh;
+    color: white;
+
+}
+.text{
+    padding: 20px;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+.form{
+    max-width: 45%;
+    margin: auto;
+
+}
+.form input,textarea{
+    margin: 15px 0;
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    font-family: cursive;
+}
+
+@media screen and (max-width:768px){
+    .text-big{
+        font-size: 60px;
+    }
+    .text-small{
+        font-size: 20px;
+    }
+    
+    hr{
+    border-style: none;
+    margin: auto;
+    
+    width: 70%;
+    border-top: 7px dotted grey;
+    }
+    .name{
+        font-size: 40px;
+    }
+
+}
+/* about responsive */
+@media screen and (max-width:1100px){
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90%;
+    }
+
+    .thumbnail{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .menu{
+        font-size: 1rem;
+    }
+    .imgfluid{
+        height: 1000px;
+        width: 1000px;
+    }
+    .img2{
+        height: 500px;
+        width: 200px;
+        margin-bottom: 4rem;
+    }
+    .head{
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 4rem;
+    }
+    .head2{
+        text-align: center;
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+        font-size: 4rem;
+    }
+    .desc{
+        text-align: justify;
+        margin-bottom: 4rem;
+        font-size: 2rem;
+    }
+}
